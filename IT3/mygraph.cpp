@@ -96,7 +96,7 @@ void MyGraph::Draw(QPainter& painter)
 
     painter.setPen(QPen(Qt::black));
 
-    int x0 = rect.left() + worldRect.left()*rect.width()/worldRect.width();
+    int x0 = rect.left() - worldRect.left()*rect.width()/worldRect.width();
     int y0 = rect.bottom() - worldRect.bottom()*rect.height()/worldRect.height();
     painter.drawLine(QPointF(x0,rect.top()),QPointF(x0,rect.bottom()));
     painter.drawLine(QPointF(rect.left(),y0),QPointF(rect.right(),y0));
